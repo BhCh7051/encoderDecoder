@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Algo1 from './components/algoComponents/Algo1';
+import Algo2 from './components/algoComponents/Algo2';
+import Nav from './components/Nav'
 
 function App() {
+  let [index, changeIndex] = useState(1);
+  
+  const changeTab = (index) => {
+    console.log(index);
+    changeIndex(index)
+  }
+
+  const renderBody = () => {
+    switch(index) {
+      case 1:
+        return <Algo1 />
+      case 2:
+        return <Algo2 />
+      default:
+        return <div>Nothing Selected</div>
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Nav changeTab={changeTab}/>
+
+      {
+        renderBody()
+      }
+      
+    </Container>
   );
 }
 
