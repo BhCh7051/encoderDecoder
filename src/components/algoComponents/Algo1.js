@@ -1,6 +1,8 @@
+import Body from "./Body";
 const Algo1 = () => {
     return(
-        <div> Algo 1 </div>
+       <Body algo_name={"Affine"}/>
+
     )
 }
 
