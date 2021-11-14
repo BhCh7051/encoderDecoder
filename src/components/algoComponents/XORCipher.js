@@ -1,3 +1,4 @@
+
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
 import encrypt from "../../algorithms/XORCipher/encrypt.js";
@@ -15,9 +16,9 @@ const XORCipher = () => {
     const handleEncrypt = (e) => {
         e.preventDefault();
         // get our new errors
-        setField("toDecrypt", form.toEncrypt.encrypt(form.key));
+        setField("toDecrypt", form.toEncrypt.XORencrypt(Number(form.key)));
         // No errors! Put any logic here for the form submission!
-        //console.log(form.toEncrypt.encrypt());
+        //console.log(form.toEncrypt.XORencrypt());
         console.log(form);
         //alert('Thank you for your feedback!')
     };
@@ -25,9 +26,9 @@ const XORCipher = () => {
     const handleDecrypt = (e) => {
         e.preventDefault();
         // get our new errors
-        setField("toEncrypt", form.toDecrypt.decrypt(form.key));
+        setField("toEncrypt", form.toDecrypt.XORdecrypt(Number(form.key)));
         // No errors! Put any logic here for the form submission!
-        //console.log(form.toDecrypt.decrypt());
+        //console.log(form.toDecrypt.XORdecrypt());
         console.log(form);
         //alert('Thank you for your feedback!')
     };

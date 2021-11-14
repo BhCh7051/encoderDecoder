@@ -12,7 +12,7 @@
  *
  * ========================================================================== */
 
-String.prototype.encrypt = function (key) {
+String.prototype.XORencrypt = function (key) {
   if (typeof key == "number") key = [key];
 
   let output = "";

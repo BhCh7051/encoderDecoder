@@ -6,7 +6,7 @@
  *
  * ========================================================================== */
 
-String.prototype.decrypt = function () {
+String.prototype.AtBashdecrypt = function () {
   let output = "";
   let alphabet = {};
 

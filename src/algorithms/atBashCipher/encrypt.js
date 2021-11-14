@@ -6,7 +6,7 @@
  *
  * ========================================================================== */
 
-String.prototype.encrypt = function () {
+String.prototype.AtBashencrypt = function () {
   let output = "";
   let alphabet = {};
 

@@ -1,7 +1,5 @@
 import { Form } from "react-bootstrap";
 import React, { useState } from "react";
-import encrypt from "../../algorithms/atBashCipher/encrypt.js";
-import decrypt from "../../algorithms/atBashCipher/decrypt.js";
 
 const Algo1 = () => {
   const [form, setForm] = useState({});

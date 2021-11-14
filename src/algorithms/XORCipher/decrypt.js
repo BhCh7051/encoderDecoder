@@ -11,7 +11,7 @@
  *
  * ========================================================================== */
 
-String.prototype.decrypt = function (key) {
+String.prototype.XORdecrypt = function (key) {
   if (typeof key == "number") key = [key];
 
   let output = "";

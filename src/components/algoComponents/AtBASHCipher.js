@@ -16,9 +16,9 @@ const AtBASHCipher = () => {
   const handleEncrypt = (e) => {
     e.preventDefault();
     // get our new errors
-    setField("toDecrypt", form.toEncrypt.encrypt());
-    // No errors! Put any logic here for the form submission!
-    //console.log(form.toEncrypt.encrypt());
+    setField("toDecrypt", form.toEncrypt.AtBashencrypt());
+      // No errors! Put any logic here for the form submission!
+      //console.log(form.toEncrypt.AtBashencrypt());
     console.log(form);
     //alert('Thank you for your feedback!')
   };
@@ -26,9 +26,9 @@ const AtBASHCipher = () => {
   const handleDecrypt = (e) => {
     e.preventDefault();
     // get our new errors
-    setField("toEncrypt", form.toDecrypt.decrypt());
-    // No errors! Put any logic here for the form submission!
-    //console.log(form.toDecrypt.decrypt());
+      setField("toEncrypt", form.toDecrypt.AtBashdecrypt());
+      // No errors! Put any logic here for the form submission!
+      //console.log(form.toDecrypt.AtBashdecrypt());
     console.log(form);
     //alert('Thank you for your feedback!')
   };
