@@ -1,8 +1,6 @@
 import { Form } from "react-bootstrap";
 import React, { useState } from "react";
 
-const VernamCipher = () => {
-  
-};
+const VernamCipher = () => {};
 
 export default VernamCipher;

@@ -1,8 +1,6 @@
 import { Form } from "react-bootstrap";
 import React, { useState } from "react";
 
-const CeaserCipher = () => {
-  
-};
+const CeaserCipher = () => {};
 
 export default CeaserCipher;

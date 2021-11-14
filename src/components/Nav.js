@@ -36,7 +36,11 @@ const Nav = (props) => {
         <ListGroup.Item action href="#link9" onClick={() => props.changeTab(9)}>
           Vigenere Cipher
         </ListGroup.Item>
-        <ListGroup.Item action href="#link10" onClick={() => props.changeTab(10)}>
+        <ListGroup.Item
+          action
+          href="#link10"
+          onClick={() => props.changeTab(10)}
+        >
           Xor Cipher
         </ListGroup.Item>
       </ListGroup>

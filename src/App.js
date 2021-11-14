@@ -13,7 +13,6 @@ import VernamCipher from "./components/algoComponents/VernamCipher";
 import VigenereCipher from "./components/algoComponents/VigenereCipher";
 import XORCipher from "./components/algoComponents/XORCipher";
 
-
 import Nav from "./components/Nav";
 
 function App() {
@@ -25,30 +24,30 @@ function App() {
   };
 
   const renderBody = () => {
-    // switch (index) {
-    //   case 1:
-    //     return <AffineCipher />;
-    //   case 2:
-    //     return <AtBASHCipher />;
-    //   case 3:
-    //     return <BitShift />
-    //   case 4:
-    //     return <XORCipher />
-    //   case 5:
-    //     return <VigenereCipher />
-    //   case 6:
-    //     return <CeaserCipher />
-    //   case 7:
-    //     return <RegressionCipher />
-    //   case 8:
-    //     return <VernamCipher />
-    //   case 9:
-    //     return <RailfenceCipher />
-    //   case 10:
-    //     return <RotorCipher />
-    //   default:
-    //     return <div>Nothing Selected</div>;
-    // }
+    switch (index) {
+      // case 1:
+      //   return <AffineCipher />;
+      case 2:
+        return <AtBASHCipher />;
+      // case 3:
+      //   return <BitShift />
+      // case 4:
+      //   return <XORCipher />
+      // case 5:
+      //   return <VigenereCipher />
+      // case 6:
+      //   return <CeaserCipher />
+      // case 7:
+      //   return <RegressionCipher />
+      // case 8:
+      //   return <VernamCipher />
+      // case 9:
+      //   return <RailfenceCipher />
+      // case 10:
+      //   return <RotorCipher />
+      default:
+        return <div>Nothing Selected</div>;
+    }
   };
 
   return (
