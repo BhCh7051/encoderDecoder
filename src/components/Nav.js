@@ -8,7 +8,7 @@ const Nav = (props) => {
   console.log(props);
   return (
     <Row xs="auto" tm="auto" className="mt-3">
-      <ListGroup horizontal defaultActiveKey="#link1">
+      <ListGroup horizontal defaultActiveKey="#link2">
         <ListGroup.Item action href="#link1" onClick={() => props.changeTab(1)}>
           Affine Cipher
         </ListGroup.Item>

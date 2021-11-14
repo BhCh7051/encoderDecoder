@@ -16,7 +16,7 @@ import XORCipher from "./components/algoComponents/XORCipher";
 import Nav from "./components/Nav";
 
 function App() {
-  let [index, changeIndex] = useState(1);
+  let [index, changeIndex] = useState(2);
 
   const changeTab = (index) => {
     console.log(index);
