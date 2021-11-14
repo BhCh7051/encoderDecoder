@@ -10,16 +10,34 @@ const Nav = (props) => {
     <Row xs="auto" tm="auto" className="mt-3">
       <ListGroup horizontal defaultActiveKey="#link1">
         <ListGroup.Item action href="#link1" onClick={() => props.changeTab(1)}>
-          Algorithm 1
+          Affine Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link2" onClick={() => props.changeTab(2)}>
-          Algorithm 2
+          atBash Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link3" onClick={() => props.changeTab(3)}>
-          Algorithm 3
+          Bit Shift Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link4" onClick={() => props.changeTab(4)}>
-          Algorithm 4
+          Ceaser Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link5" onClick={() => props.changeTab(5)}>
+          Rail Fence Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link6" onClick={() => props.changeTab(6)}>
+          Regression Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link7" onClick={() => props.changeTab(7)}>
+          Rotor Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link8" onClick={() => props.changeTab(8)}>
+          Vernam Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link9" onClick={() => props.changeTab(9)}>
+          Vigenere Cipher
+        </ListGroup.Item>
+        <ListGroup.Item action href="#link10" onClick={() => props.changeTab(10)}>
+          Xor Cipher
         </ListGroup.Item>
       </ListGroup>
 
