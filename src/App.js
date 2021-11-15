@@ -31,8 +31,8 @@ function App() {
             return <AtBASHCipher/>;
         case 3:
             return <BitShift/>
-        //  case 4:
-        // return <CeaserCipher />
+        case 4:
+            return <CeaserCipher/>
 
         case 5:
             return <RailfenceCipher/>
