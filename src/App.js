@@ -35,7 +35,7 @@ function App() {
         // return <CeaserCipher />
 
       case 5:
-        return <RailfenceCipher/>
+          return <RailfenceCipher/>
 
         // case 6:
         //   return <RegressionCipher />
@@ -45,14 +45,14 @@ function App() {
 
         // case 8:
         //   return <VernamCipher />
-        // case 9:
-        //   return <VigenereCipher />
+        case 9:
+            return <VigenereCipher/>
 
-      case 10:
-        return <XORCipher/>
+        case 10:
+            return <XORCipher/>
 
-      default:
-        return <div>Nothing Selected</div>;
+        default:
+            return <div>Nothing Selected</div>;
     }
   };
 

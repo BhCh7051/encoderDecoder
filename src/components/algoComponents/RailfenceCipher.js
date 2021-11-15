@@ -17,7 +17,7 @@ const RailfenceCipher = () => {
         // get our new errors
         setField("toDecrypt", form.toEncrypt.Railfenceencrypt(Number(form.key)));
         // No errors! Put any logic here for the form submission!
-        //console.log(form.toEncrypt.XORencrypt());
+        //console.log(form.toEncrypt.Railfenceencrypt());
         console.log(form);
         //alert('Thank you for your feedback!')
     };
@@ -27,7 +27,7 @@ const RailfenceCipher = () => {
         // get our new errors
         setField("toEncrypt", form.toDecrypt.Railfencedecrypt(Number(form.key)));
         // No errors! Put any logic here for the form submission!
-        //console.log(form.toDecrypt.XORdecrypt());
+        //console.log(form.toDecrypt.Railfencedecrypt());
         console.log(form);
         //alert('Thank you for your feedback!')
     };
