@@ -34,8 +34,8 @@ function App() {
         //  case 4:
         // return <CeaserCipher />
 
-        // case 5:
-        //   return <RailfenceCipher />
+      case 5:
+        return <RailfenceCipher/>
 
         // case 6:
         //   return <RegressionCipher />

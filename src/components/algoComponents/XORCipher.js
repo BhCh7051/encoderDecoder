@@ -35,7 +35,7 @@ const XORCipher = () => {
 
     return (
         <div className="Flex">
-            <div className="row justify-content-center">AtBash Cipher</div>
+            <div className="row justify-content-center h1 mt-4">XOR Cipher</div>
             <Form className="row">
                 <Form.Group className="col-5" controlId="exampleForm.ControlTextarea1">
                     <Form.Label>To Encrypt(Decrypted Text)</Form.Label>
@@ -48,35 +48,39 @@ const XORCipher = () => {
                     />
                 </Form.Group>
                 <div className="col-2">
-                    <Container fluid className="justify-content-center">
-                        <Row>
-                            <Form.Label>Key</Form.Label>
-                            <Form.Control
-                                type="text"
-                                //defaultValue="The quick brown fox jumps over the lazy dog."
-                                value={form.key}
-                                onChange={(e) => setField("key", e.target.value)}
+                    <Container fluid className="justify-content-center h-100 flex ">
+                        <div className="h-50 mt-4 w-100">
+                            <Row className="justify-content-center">
+                                <Form.Label>Key</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    //defaultValue="The quick brown fox jumps over the lazy dog."
+                                    value={form.key}
+                                    onChange={(e) => setField("key", e.target.value)}
 
-                            />
-                        </Row>
-                        <Row>
-                            <button
-                                type="button"
-                                className="btn btn-primary col-6 m-auto"
-                                onClick={handleEncrypt}
-                                aria-pressed="false"
-                            >
-                                Encrypt Left
-                            </button>
-                            <button
-                                type="button"
-                                onClick={handleDecrypt}
-                                className="btn btn-primary col-6 m-auto"
-                                aria-pressed="true"
-                            >
-                                Decrypt Right
-                            </button>
-                        </Row>
+                                />
+                            </Row>
+                        </div>
+                        <div className="row align-items-center h-50">
+                            <div>
+                                <button
+                                    type="button"
+                                    className="btn btn-primary w-100 m-1"
+                                    onClick={handleEncrypt}
+                                    aria-pressed="false"
+                                >
+                                    Encrypt Left
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={handleDecrypt}
+                                    className="btn btn-primary w-100 m-1"
+                                    aria-pressed="true"
+                                >
+                                    Decrypt Right
+                                </button>
+                            </div>
+                        </div>
                     </Container>
                 </div>
                 <Form.Group className="col-5" controlId="exampleForm.ControlTextarea1">
