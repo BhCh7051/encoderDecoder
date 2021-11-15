@@ -40,8 +40,8 @@ function App() {
         // case 6:
         //   return <RegressionCipher />
 
-        // case 7:
-        //   return <RotorCipher />
+        case 7:
+            return <RotorCipher/>
 
         // case 8:
         //   return <VernamCipher />
