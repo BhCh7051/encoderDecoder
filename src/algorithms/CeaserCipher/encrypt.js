@@ -7,8 +7,8 @@
 String.prototype.Ceaserencrypt = function (n) {
   let out = "";
   for (let i of this) {
-    out += String.fromCharCode(i.charCodeAt(0) + n)
+    out += String.fromCharCode(i.charCodeAt(0) + n);
   }
   return out;
-}
-module.exports = (text, n) => text.encrypt(n)
+};
+module.exports = (text, n) => text.encrypt(n);

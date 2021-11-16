@@ -14,23 +14,23 @@ const AtBASHCipher = () => {
   };
 
   const handleEncrypt = (e) => {
-    e.preventDefault();
-    // get our new errors
-    setField("toDecrypt", form.toEncrypt.AtBashencrypt());
+      e.preventDefault();
+      // get our new errors
+      setField("toDecrypt", form.toEncrypt.AtBashencrypt());
       // No errors! Put any logic here for the form submission!
       //console.log(form.toEncrypt.AtBashencrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
-    e.preventDefault();
-    // get our new errors
+      e.preventDefault();
+      // get our new errors
       setField("toEncrypt", form.toDecrypt.AtBashdecrypt());
       // No errors! Put any logic here for the form submission!
       //console.log(form.toDecrypt.AtBashdecrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
   return (
@@ -49,38 +49,38 @@ const AtBASHCipher = () => {
         </Form.Group>
         <div className="col-2">
           <Container fluid className="justify-content-center h-100 flex ">
-            <div className="h-50 mt-4 w-100">
-                <Row className="justify-content-center">
-                    <Form.Label>Key</Form.Label>
-                    <Form.Control
-                        // as="text"
-                        // //defaultValue="The quick brown fox jumps over the lazy dog."
-                        // value={form.toEncrypt}
-                        // onChange={(e) => setField("toEncrypt", e.target.value)}
-                        // rows={10}
-                    />
-                </Row>
-            </div>
-            <div className="row align-items-center h-50">
-                <div>
-                    <button
-                    type="button"
-                    className="btn btn-primary w-100 m-1"
-                    onClick={handleEncrypt}
-                    aria-pressed="false"
-                    >
-                    Encrypt Left
-                    </button>
-                    <button
-                    type="button"
-                    onClick={handleDecrypt}
-                    className="btn btn-primary w-100 m-1"
-                    aria-pressed="true"
-                    >
-                    Decrypt Right
-                    </button>
-                </div>
-            </div>
+              <div className="h-50 mt-4 w-100">
+                  <Row className="justify-content-center">
+                      <Form.Label>Key</Form.Label>
+                      <Form.Control
+                          // as="text"
+                          // //defaultValue="The quick brown fox jumps over the lazy dog."
+                          // value={form.toEncrypt}
+                          // onChange={(e) => setField("toEncrypt", e.target.value)}
+                          // rows={10}
+                      />
+                  </Row>
+              </div>
+              <div className="row align-items-center h-50">
+                  <div>
+                      <button
+                          type="button"
+                          className="btn btn-primary w-100 m-1"
+                          onClick={handleEncrypt}
+                          aria-pressed="false"
+                      >
+                          Encrypt Left
+                      </button>
+                      <button
+                          type="button"
+                          onClick={handleDecrypt}
+                          className="btn btn-primary w-100 m-1"
+                          aria-pressed="true"
+                      >
+                          Decrypt Right
+                      </button>
+                  </div>
+              </div>
           </Container>
         </div>
         <Form.Group className="col-5" controlId="exampleForm.ControlTextarea1">

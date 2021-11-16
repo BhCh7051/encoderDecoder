@@ -56,7 +56,6 @@ const BitShiftCipher = () => {
                                     //defaultValue="The quick brown fox jumps over the lazy dog."
                                     value={form.key}
                                     onChange={(e) => setField("key", e.target.value)}
-
                                 />
                             </Row>
                         </div>
@@ -97,5 +96,3 @@ const BitShiftCipher = () => {
 };
 
 export default BitShiftCipher;
-
-

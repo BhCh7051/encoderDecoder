@@ -7,29 +7,27 @@
  * ========================================================================== */
 
 String.prototype.encode = function () {
-  let array = [];
-  for (let i of this) {
-    array.push(i.charCodeAt(0))
-  }
-  return array
-}
-String.prototype.BitShiftdecrypt = function (key) {
-  const keyEncoded = key.encode()
-  if (typeof atob === 'undefined') {
-    global.atob = b64Encoded => new Buffer(b64Encoded, 'base64').toString();
-  }
-  let array = JSON.parse(
-      atob(this.toString())
-  )
-  let decrypted = array.map(x => {
-    keyEncoded.reverse()
-    x = parseInt(x)
-    for (let i of keyEncoded) {
-      x = x - 1 >> i % 8
+    let array = [];
+    for (let i of this) {
+        array.push(i.charCodeAt(0));
     }
-    return x;
-  })
-  return String.fromCharCode(...decrypted)
-}
+    return array;
+};
+String.prototype.BitShiftdecrypt = function (key) {
+    const keyEncoded = key.encode();
+    if (typeof atob === "undefined") {
+        global.atob = (b64Encoded) => new Buffer(b64Encoded, "base64").toString();
+    }
+    let array = JSON.parse(atob(this.toString()));
+    let decrypted = array.map((x) => {
+        keyEncoded.reverse();
+        x = parseInt(x);
+        for (let i of keyEncoded) {
+            x = (x - 1) >> i % 8;
+        }
+        return x;
+    });
+    return String.fromCharCode(...decrypted);
+};
 
-module.exports = (text, key) => text.decrypt(key)
+module.exports = (text, key) => text.decrypt(key);
