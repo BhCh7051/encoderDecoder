@@ -7,7 +7,7 @@ String.prototype.Affineencrypt = function (a, b) {
     else array.push(' ')
   }
   let output = "";
-  let cle = [];
+ /* let cle = [];*/
   let divtem = "";
   console.log(array);
   for (let i of array) {
