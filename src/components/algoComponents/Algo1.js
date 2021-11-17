@@ -45,6 +45,8 @@ const Algo1 = () => {
           />
         </Form.Group>
         <div className="col-2">
+          <button> b1 </button>
+          <button> b1 </button>
           <button
             type="button"
             class="btn btn-primary"
