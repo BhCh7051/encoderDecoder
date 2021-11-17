@@ -19,13 +19,13 @@ String.prototype.Affinedecrypt = function (a, b) {
     }
   }
   for (let i = 0; i < this.length; i++) {
-    console.log(a_inv);
-    console.log(cipher[i]);
-    console.log(cipher.charCodeAt(i));
+    // console.log(a_inv);
+    // console.log(cipher[i]);
+    // console.log(cipher.charCodeAt(i));
     // console.log((((a_inv * ((cipher[i]+65 - b)) % 26)) + 65));
     if (cipher[i] !== ' ')
       msg = msg +
-          String.fromCharCode(((a_inv * (cipher.charCodeAt(i) - 97 - b)) % 26) + 97);
+          String.fromCharCode(((a_inv * (cipher.charCodeAt(i) - 97 + 26 - b)) % 26) + 97);
     else
         //else simply append space character
       msg += cipher[i];
@@ -42,7 +42,7 @@ String.prototype.Affinedecrypt = function (a, b) {
   //   const image = alphabet[(keyArray[i] * 26 + array[i] - b) / a];
   //   output += image;
   // }
-  console.log(msg);
+  // console.log(msg);
   return msg;
 };
 module.exports = (text, a, b) => text.decrypt(a, b);
