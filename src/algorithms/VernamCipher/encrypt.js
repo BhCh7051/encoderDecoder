@@ -11,7 +11,7 @@ String.prototype.Vernamencrypt = function (key) {
   }
   const alphabet =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ".split("");
-  let nText = [];
+    let nText = [];
   let kText = [];
   for (let i of this) {
     nText.push(alphabet.indexOf(i.toLowerCase()));

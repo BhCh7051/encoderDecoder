@@ -11,7 +11,7 @@ String.prototype.Vernamdecrypt = function (key) {
   }
   const alphabet =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ".split("");
-  let nText = [];
+    let nText = [];
   let kText = [];
   for (let i of this) {
     nText.push(alphabet.indexOf(i.toLowerCase()));
@@ -21,12 +21,12 @@ String.prototype.Vernamdecrypt = function (key) {
   }
   let out = "";
   for (let i in nText) {
-    out +=
-        alphabet[
-            nText[i] - kText[i] < 0
-                ? 26 + (nText[i] - kText[i])
-                : (nText[i] - kText[i]) % 26
-            ];
+      out +=
+          alphabet[
+              nText[i] - kText[i] < 0
+                  ? 26 + (nText[i] - kText[i])
+                  : (nText[i] - kText[i]) % 26
+              ];
   }
   return out;
 };

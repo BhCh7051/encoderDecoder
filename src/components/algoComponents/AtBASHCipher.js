@@ -1,17 +1,17 @@
-import { Container, Form, Row } from "react-bootstrap";
-import React, { useState } from "react";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {Container, Form, Row} from "react-bootstrap";
+import React, {useState} from "react";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import encrypt from "../../algorithms/atBashCipher/encrypt.js";
 import decrypt from "../../algorithms/atBashCipher/decrypt.js";
 
 const AtBASHCipher = () => {
-  const [form, setForm] = useState({});
-  const setField = (field, value) => {
-    setForm({
-      ...form,
-      [field]: value,
+    const [form, setForm] = useState({});
+    const setField = (field, value) => {
+        setForm({
+            ...form,
+            [field]: value,
     });
   };
 
@@ -35,21 +35,21 @@ const AtBASHCipher = () => {
       //alert('Thank you for your feedback!')
   };
 
-  const copyLeft = (e) => {
-    e.preventDefault();
-    setForm({
-      ...form,
-      toEncrypt: form.toDecrypt
-    })
-  }
+    const copyLeft = (e) => {
+        e.preventDefault();
+        setForm({
+            ...form,
+            toEncrypt: form.toDecrypt,
+        });
+    };
 
-  const copyRight = (e) => {
-    e.preventDefault();
-    setForm({
-      ...form,
-      toDecrypt: form.toEncrypt
-    })
-  }
+    const copyRight = (e) => {
+        e.preventDefault();
+        setForm({
+            ...form,
+            toDecrypt: form.toEncrypt,
+        });
+    };
 
   return (
     <div className="Flex">
@@ -79,30 +79,39 @@ const AtBASHCipher = () => {
                     />
                 </Row> */}
                 <div className="d-flex flex-column justify-content-center align-items-center pt-4">
-                  {/* <svg data-testid="ArrowBackIcon"></svg> */}
-                  <button className="btn btn-primary w-75 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
-                  <button className="btn btn-primary w-75 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
+                    {/* <svg data-testid="ArrowBackIcon"></svg> */}
+                    <button className="btn btn-primary w-75 m-1" onClick={copyLeft}>
+                        {" "}
+                        <ArrowBackIcon/>{" "}
+                    </button>
+                    <button
+                        className="btn btn-primary w-75 m-1"
+                        onClick={copyRight}
+                    >
+                        {" "}
+                        <ArrowForwardIcon/>
+                    </button>
                 </div>
             </div>
-            <div className="row align-items-center h-50">
-                <div>
-                  <button
-                  type="button"
-                  className="btn btn-primary w-100 m-1"
-                  onClick={handleEncrypt}
-                  aria-pressed="false"
-                  >
-                  Encrypt Left
-                  </button>
-                  <button
-                  type="button"
-                  onClick={handleDecrypt}
-                  className="btn btn-primary w-100 m-1"
-                  aria-pressed="true"
-                  >
-                  Decrypt Right
-                  </button>
-                </div>
+              <div className="row align-items-center h-50">
+                  <div>
+                      <button
+                          type="button"
+                          className="btn btn-primary w-100 m-1"
+                          onClick={handleEncrypt}
+                          aria-pressed="false"
+                      >
+                          Encrypt Left
+                      </button>
+                      <button
+                          type="button"
+                          onClick={handleDecrypt}
+                          className="btn btn-primary w-100 m-1"
+                          aria-pressed="true"
+                      >
+                          Decrypt Right
+                      </button>
+                  </div>
             </div>
           </Container>
         </div>

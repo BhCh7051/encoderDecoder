@@ -23,12 +23,14 @@ String.prototype.Affinedecrypt = function (a, b) {
     // console.log(cipher[i]);
     // console.log(cipher.charCodeAt(i));
     // console.log((((a_inv * ((cipher[i]+65 - b)) % 26)) + 65));
-    if (cipher[i] !== ' ')
-      msg = msg +
-          String.fromCharCode(((a_inv * (cipher.charCodeAt(i) - 97 + 26 - b)) % 26) + 97);
-    else
-        //else simply append space character
-      msg += cipher[i];
+    if (cipher[i] !== " ")
+      msg =
+          msg +
+          String.fromCharCode(
+              ((a_inv * (cipher.charCodeAt(i) - 97 + 26 - b)) % 26) + 97
+          );
+    //else simply append space character
+    else msg += cipher[i];
   }
   // for (let i in keyArray) {
   //   keyArray[i] = parseInt(keyArray[i]);

@@ -1,0 +1,16 @@
+// Lux 5.1.3
+// Bootswatch
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+//sketchy
+@import "./custom/_variables-1.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./custom/_bootswatch.scss";
+
+//solar
+//@import "./custom/_variables (1).scss";
+//@import "../../node_modules/bootstrap/scss/bootstrap";
+//@import "./custom/_bootswatch (1).scss";

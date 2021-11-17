@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
+
 import AffineCipher from "./components/algoComponents/AffineCipher";
 import Algo1 from "./components/algoComponents/Algo1";
 import Algo2 from "./components/algoComponents/Algo2";
@@ -15,7 +16,7 @@ import XORCipher from "./components/algoComponents/XORCipher";
 import Header from "./components/Header";
 
 import Nav from "./components/Nav";
-
+import("./scss/theme.scss");
 function App() {
   let [index, changeIndex] = useState(2);
 
@@ -58,16 +59,16 @@ function App() {
   };
 
   return (
-    <>
-    <div className="bg-light">
-      <Header />
-      <Container>
-        <Nav changeTab={changeTab} />
+      <>
+        <div className="bg-light">
+          <Header/>
+          <Container>
+            <Nav changeTab={changeTab}/>
 
-        {renderBody()}
-      </Container>
-    </div>
-    </>
+            {renderBody()}
+          </Container>
+        </div>
+      </>
   );
 }
 

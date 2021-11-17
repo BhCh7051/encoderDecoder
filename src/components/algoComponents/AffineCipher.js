@@ -2,9 +2,8 @@ import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
 import encrypt from "../../algorithms/AffineCipher/encrypt.js";
 import decrypt from "../../algorithms/AffineCipher/decrypt.js";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const AffineCipher = () => {
   const [form, setForm] = useState({});
@@ -45,17 +44,17 @@ const AffineCipher = () => {
     e.preventDefault();
     setForm({
       ...form,
-      toEncrypt: form.toDecrypt
-    })
-  }
+      toEncrypt: form.toDecrypt,
+    });
+  };
 
   const copyRight = (e) => {
     e.preventDefault();
     setForm({
       ...form,
-      toDecrypt: form.toEncrypt
-    })
-  }
+      toDecrypt: form.toEncrypt,
+    });
+  };
 
   return (
       <div className="Flex">
@@ -92,8 +91,20 @@ const AffineCipher = () => {
                 </Row>
                 <div className="d-flex justify-content-center align-items-center">
                   {/* <svg data-testid="ArrowBackIcon"></svg> */}
-                  <button className="btn btn-primary w-100 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
-                  <button className="btn btn-primary w-100 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
+                  <button
+                      className="btn btn-primary w-100 m-1"
+                      onClick={copyLeft}
+                  >
+                    {" "}
+                    <ArrowBackIcon/>{" "}
+                  </button>
+                  <button
+                      className="btn btn-primary w-100 m-1"
+                      onClick={copyRight}
+                  >
+                    {" "}
+                    <ArrowForwardIcon/>
+                  </button>
                 </div>
               </div>
               <div className="row align-items-center h-50">

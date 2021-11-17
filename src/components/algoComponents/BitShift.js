@@ -3,8 +3,8 @@ import React, {useState} from "react";
 import encrypt from "../../algorithms/BitShiftCipher/encrypt.js";
 import decrypt from "../../algorithms/BitShiftCipher/decrypt.js";
 
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const BitShiftCipher = () => {
     const [form, setForm] = useState({});
@@ -39,17 +39,17 @@ const BitShiftCipher = () => {
         e.preventDefault();
         setForm({
             ...form,
-            toEncrypt: form.toDecrypt
-        })
-    }
+            toEncrypt: form.toDecrypt,
+        });
+    };
 
     const copyRight = (e) => {
         e.preventDefault();
         setForm({
             ...form,
-            toDecrypt: form.toEncrypt
-        })
-    }
+            toDecrypt: form.toEncrypt,
+        });
+    };
 
     return (
         <div className="Flex">
@@ -78,8 +78,20 @@ const BitShiftCipher = () => {
                                 />
                                 <div className="d-flex flex-column justify-content-center align-items-center p-1">
                                     {/* <svg data-testid="ArrowBackIcon"></svg> */}
-                                    <button className="btn btn-primary w-75 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
-                                    <button className="btn btn-primary w-75 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
+                                    <button
+                                        className="btn btn-primary w-75 m-1"
+                                        onClick={copyLeft}
+                                    >
+                                        {" "}
+                                        <ArrowBackIcon/>{" "}
+                                    </button>
+                                    <button
+                                        className="btn btn-primary w-75 m-1"
+                                        onClick={copyRight}
+                                    >
+                                        {" "}
+                                        <ArrowForwardIcon/>
+                                    </button>
                                 </div>
                             </Row>
                         </div>

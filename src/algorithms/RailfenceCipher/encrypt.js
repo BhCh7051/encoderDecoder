@@ -7,8 +7,8 @@
  * ========================================================================== */
 
 String.prototype.Railfenceencrypt = function (rows = 3) {
-  rows = rows || 3;
-  let fence = [];
+    rows = rows || 3;
+    let fence = [];
     for (let i = 0; i < rows; i++) fence.push([]);
     let rail = 0;
     let change = 1;
