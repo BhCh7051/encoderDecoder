@@ -2,6 +2,9 @@ import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
 import encrypt from "../../algorithms/AffineCipher/encrypt.js";
 import decrypt from "../../algorithms/AffineCipher/decrypt.js";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 const AffineCipher = () => {
   const [form, setForm] = useState({});
@@ -38,6 +41,22 @@ const AffineCipher = () => {
     //alert('Thank you for your feedback!')
   };
 
+  const copyLeft = (e) => {
+    e.preventDefault();
+    setForm({
+      ...form,
+      toEncrypt: form.toDecrypt
+    })
+  }
+
+  const copyRight = (e) => {
+    e.preventDefault();
+    setForm({
+      ...form,
+      toDecrypt: form.toEncrypt
+    })
+  }
+
   return (
       <div className="Flex">
         <div className="row justify-content-center h1 mt-4">Affine Cipher</div>
@@ -55,7 +74,7 @@ const AffineCipher = () => {
           <div className="col-2">
             <Container fluid className="justify-content-center h-100 flex ">
               <div className="h-50 mt-4 w-100">
-                <Row className="justify-content-center">
+                <Row className="text-center">
                   <Form.Label>Key A</Form.Label>
                   <Form.Control
                       type="text"
@@ -71,6 +90,11 @@ const AffineCipher = () => {
                       onChange={(e) => setField("keyB", e.target.value)}
                   />
                 </Row>
+                <div className="d-flex justify-content-center align-items-center">
+                  {/* <svg data-testid="ArrowBackIcon"></svg> */}
+                  <button className="btn btn-primary w-100 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
+                  <button className="btn btn-primary w-100 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
+                </div>
               </div>
               <div className="row align-items-center h-50">
                 <div>

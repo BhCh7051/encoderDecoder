@@ -78,10 +78,10 @@ const AtBASHCipher = () => {
                         // rows={10}
                     />
                 </Row> */}
-                <div className="d-flex justify-content-center align-items-center">
+                <div className="d-flex flex-column justify-content-center align-items-center pt-4">
                   {/* <svg data-testid="ArrowBackIcon"></svg> */}
-                  <button className="btn btn-primary w-100 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
-                  <button className="btn btn-primary w-100 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
+                  <button className="btn btn-primary w-75 m-1" onClick={copyLeft}> <ArrowBackIcon /> </button>
+                  <button className="btn btn-primary w-75 m-1" onClick={copyRight}> <ArrowForwardIcon /></button>
                 </div>
             </div>
             <div className="row align-items-center h-50">
