@@ -42,7 +42,7 @@ String.prototype.Affinedecrypt = function (a, b) {
   //   const image = alphabet[(keyArray[i] * 26 + array[i] - b) / a];
   //   output += image;
   // }
-  console.log(msg);
+  // console.log(msg);
   return msg;
 };
 module.exports = (text, a, b) => text.decrypt(a, b);
