@@ -12,6 +12,7 @@ import RotorCipher from "./components/algoComponents/RotorCipher";
 import VernamCipher from "./components/algoComponents/VernamCipher";
 import VigenereCipher from "./components/algoComponents/VigenereCipher";
 import XORCipher from "./components/algoComponents/XORCipher";
+import Header from "./components/Header";
 
 import Nav from "./components/Nav";
 
@@ -57,11 +58,16 @@ function App() {
   };
 
   return (
-    <Container>
-      <Nav changeTab={changeTab} />
+    <>
+    <div className="bg-light">
+      <Header />
+      <Container>
+        <Nav changeTab={changeTab} />
 
-      {renderBody()}
-    </Container>
+        {renderBody()}
+      </Container>
+    </div>
+    </>
   );
 }
 
