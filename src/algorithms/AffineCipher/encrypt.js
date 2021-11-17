@@ -1,4 +1,4 @@
-String.prototype.encrypt = function (a, b) {
+String.prototype.Affineencrypt = function (a, b) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
   let array = [];
   for (let i of this) {
@@ -13,6 +13,7 @@ String.prototype.encrypt = function (a, b) {
     const div = Math.floor((i * a + b) / 26).toString();
     cle.push(div);
   }
-  return [output, cle.join("-")];
+  return output;
+  // return [output, cle.join("-")];
 };
 module.exports = (text, a, b) => text.encrypt(a, b);

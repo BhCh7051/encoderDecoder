@@ -25,31 +25,31 @@ function App() {
 
   const renderBody = () => {
     switch (index) {
-        // case 1:
-        //   return <AffineCipher />;
+      case 1:
+        return <AffineCipher/>;
       case 2:
         return <AtBASHCipher/>;
-        // case 3:
-        //   return <BitShift />
-        //  case 4:
-        // return <CeaserCipher />
+      case 3:
+        return <BitShift/>;
+      case 4:
+        return <CeaserCipher/>;
 
-        // case 5:
-        //   return <RailfenceCipher />
+      case 5:
+        return <RailfenceCipher/>;
 
         // case 6:
         //   return <RegressionCipher />
 
-        // case 7:
-        //   return <RotorCipher />
+      case 7:
+        return <RotorCipher/>;
 
-        // case 8:
-        //   return <VernamCipher />
-        // case 9:
-        //   return <VigenereCipher />
+      case 8:
+        return <VernamCipher/>;
+      case 9:
+        return <VigenereCipher/>;
 
       case 10:
-        return <XORCipher/>
+        return <XORCipher/>;
 
       default:
         return <div>Nothing Selected</div>;

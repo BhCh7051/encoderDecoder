@@ -2,19 +2,19 @@
  *
  *    Use:
  *    'Hello World!'.encrypt()
- *    => 'Svool Dliow!'
+ *    => 'Uryyb Jbeyq!'
  *
  * ========================================================================== */
 
-String.prototype.AtBashencrypt = function () {
+String.prototype.Rot13encrypt = function () {
   let output = "";
   let alphabet = {};
 
   const chr = (x) => String.fromCharCode(x);
 
   for (let i = 0; i < 26; i++) {
-    alphabet[chr(65 + i)] = chr(90 - i);
-    alphabet[chr(97 + i)] = chr(122 - i);
+    alphabet[chr(65 + i)] = chr(65 + ((i + 13) % 26));
+    alphabet[chr(97 + i)] = chr(97 + ((i + 13) % 26));
   }
 
   for (let char of this) {
@@ -24,4 +24,5 @@ String.prototype.AtBashencrypt = function () {
 
   return output;
 };
+
 module.exports = (text) => text.encrypt();

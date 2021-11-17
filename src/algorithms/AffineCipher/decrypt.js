@@ -1,6 +1,8 @@
-String.prototype.decrypt = function (key, a, b) {
+String.prototype.Affinedecrypt = function (a, b) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-  const keyArray = key.split("-");
+  const keyArray = this
+  console.log(keyArray)
+  // (key).split("-");
   for (let i in keyArray) {
     keyArray[i] = parseInt(keyArray[i]);
   }
@@ -15,4 +17,4 @@ String.prototype.decrypt = function (key, a, b) {
   }
   return output;
 };
-module.exports = (text, key, a, b) => text.decrypt(key, a, b);
+module.exports = (text, a, b) => text.decrypt(a, b);
