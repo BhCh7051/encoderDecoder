@@ -25,7 +25,7 @@ const Nav = (props) => {
           Rail Fence Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link6" onClick={() => props.changeTab(6)}>
-          Regression Cipher
+          Hill Climb Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link7" onClick={() => props.changeTab(7)}>
           Rotor Cipher
