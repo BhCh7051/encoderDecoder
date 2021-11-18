@@ -13,7 +13,7 @@ const Nav = (props) => {
           Affine Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link2" onClick={() => props.changeTab(2)}>
-          atBash Cipher
+          Atbash Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link3" onClick={() => props.changeTab(3)}>
           Bit Shift Cipher
@@ -28,7 +28,7 @@ const Nav = (props) => {
           Hill Climb Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link7" onClick={() => props.changeTab(7)}>
-          Rotor Cipher
+          Rot13 Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link8" onClick={() => props.changeTab(8)}>
           Vernam Cipher

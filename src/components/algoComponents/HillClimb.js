@@ -164,8 +164,11 @@ const HillClimb = () => {
           </Form.Group>
         </Form>
         <div>
-            <h1>Description</h1>
-            <p className="display-6">Hill cipher is a polygraphic substitution cipher based on linear algebra. Each letter is represented by a number modulo 26. The scheme A = 0, B = 1, …, Z = 25 is used.</p>
+            <h1 className="text-light bg-primary display-5">Description</h1>
+            <p style={{"font-size": "150%"}}>Hill cipher is a polygraphic substitution cipher based on linear algebra. Each letter is represented by a number modulo 26. The scheme A = 0, B = 1, …, Z = 25 is used.
+            For encryption we convert the given key and message to numeric form using the above rule. Then perform matrix multiplication and take mod 26 of the resulting string.
+            Again convert the numeric result to alphabet.
+            </p>
         </div>
       </div>
   );

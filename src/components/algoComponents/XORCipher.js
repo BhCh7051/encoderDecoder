@@ -124,6 +124,14 @@ const XORCipher = () => {
                   />
               </Form.Group>
           </Form>
+          <div>
+                <h1 className="text-light bg-primary display-5">Description</h1>
+                <p style={{"font-size": "150%"}}>
+                Firstly the cipher works on the principle of boolean XOR i.e returns 1 if and only if both “A” and “B” are different.
+                For encryption we need to convert the given message into their equivalent ASCII 
+                and then XOR the results with the binary conversion of the key given.
+                </p>
+            </div>
       </div>
   );
 };

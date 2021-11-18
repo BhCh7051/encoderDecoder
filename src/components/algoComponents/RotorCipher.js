@@ -126,6 +126,14 @@ const Rot13Cipher = () => {
                     />
                 </Form.Group>
             </Form>
+            <div>
+            <h1 className="text-light bg-primary display-5 mt-4">Description</h1>
+            <p style={{"font-size": "150%"}}>The ROT13 cipher will substitute each letter by the letter coming 13 places after it in the alphabet. According to this logic, N should map to the 27th character of the alphabet, but we only have 26 characters, so we loop the alphabet around.
+            Using  ROT13(x) = ( x + 13 ) % 26 .
+            When encoding a string, we replace uppercase characters with their uppercase mirror, lowercase character with their lowercase mirror, and leave all other characters untouched
+
+            </p>
+            </div>
         </div>
     );
 };

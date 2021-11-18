@@ -125,6 +125,11 @@ const AtBASHCipher = () => {
           />
         </Form.Group>
       </Form>
+      <div>
+        <h1 className="text-light bg-primary display-5 mt-4">Description</h1>
+        <p style={{"font-size": "150%"}}>Atbash cipher is a substitution cipher with just one specific key where all the letters are reversed that is A to Z and Z to A
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-dark d-flex bg-primary ">
+            <div className="container-fluid justify-content-around">
+                <a className="navbar-brand" style={{"font-size": "200%" }} href="#">
+                    {/* <img src="/favicon-32x32.png" width="40" height="40" alt="" className="mr-2" /> */}
                     Encoder and Decoder for Transposition and Substitution Ciphers
                 </a>
             </div>
