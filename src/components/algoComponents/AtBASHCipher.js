@@ -59,7 +59,7 @@ const AtBASHCipher = () => {
           <Form.Label>To Encrypt(Decrypted Text)</Form.Label>
             <Form.Control
                 as="textarea"
-                defaultValue="The quick brown fox jumps over the lazy dog."
+                // defaultValue="The quick brown fox jumps over the lazy dog."
                 value={form.toEncrypt}
                 onChange={(e) => setField("toEncrypt", e.target.value)}
                 rows={10}

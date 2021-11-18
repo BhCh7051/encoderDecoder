@@ -16,7 +16,8 @@ String.prototype.encode = function () {
 String.prototype.BitShiftencrypt = function (key) {
     const encoded = this.encode();
     const keyEncoded = key.encode();
-    // console.log(keyEncoded)
+    //console.log(keyEncoded);
+    //console.log(encoded);
     let array = encoded.map((x) => {
         x = parseInt(x);
         for (let i of keyEncoded) {
