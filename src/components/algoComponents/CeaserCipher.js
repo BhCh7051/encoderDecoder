@@ -77,7 +77,7 @@ const CeaserCipher = () => {
                                   onChange={(e) => setField("key", e.target.value)}
                               />
                           </Row>
-                          <div className="d-flex flex-column justify-content-center align-items-center p-1">
+                          <div className="d-flex flex-column justify-content-center align-items-center pt-4">
                               {/* <svg data-testid="ArrowBackIcon"></svg> */}
                               <button className="btn btn-primary w-75 m-1" onClick={copyLeft}>
                                   {" "}

@@ -3,6 +3,9 @@ import React, {useState} from "react";
 import encrypt from "../../algorithms/RailfenceCipher/encrypt.js";
 import decrypt from "../../algorithms/RailfenceCipher/decrypt.js";
 
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 const RailfenceCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -32,6 +35,22 @@ const RailfenceCipher = () => {
     //alert('Thank you for your feedback!')
   };
 
+  const copyLeft = (e) => {
+    e.preventDefault();
+    setForm({
+        ...form,
+        toEncrypt: form.toDecrypt,
+    });
+};
+
+const copyRight = (e) => {
+    e.preventDefault();
+    setForm({
+        ...form,
+        toDecrypt: form.toEncrypt,
+    });
+};
+
   return (
       <div className="Flex">
           <div className="row justify-content-center h1 mt-4">Railfence Cipher</div>
@@ -58,6 +77,20 @@ const RailfenceCipher = () => {
                                   onChange={(e) => setField("key", e.target.value)}
                               />
                           </Row>
+                          <div className="d-flex flex-column justify-content-center align-items-center pt-4">
+                                {/* <svg data-testid="ArrowBackIcon"></svg> */}
+                                <button className="btn btn-primary w-75 m-1" onClick={copyLeft}>
+                                    {" "}
+                                    <ArrowBackIcon/>{" "}
+                                </button>
+                                <button
+                                    className="btn btn-primary w-75 m-1"
+                                    onClick={copyRight}
+                                >
+                                    {" "}
+                                    <ArrowForwardIcon/>
+                                </button>
+                            </div>
                       </div>
                       <div className="row align-items-center h-50">
                           <div>

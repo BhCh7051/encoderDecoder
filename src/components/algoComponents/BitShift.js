@@ -76,24 +76,22 @@ const BitShiftCipher = () => {
                                     value={form.key}
                                     onChange={(e) => setField("key", e.target.value)}
                                 />
-                                <div className="d-flex flex-column justify-content-center align-items-center p-1">
-                                    {/* <svg data-testid="ArrowBackIcon"></svg> */}
-                                    <button
-                                        className="btn btn-primary w-75 m-1"
-                                        onClick={copyLeft}
-                                    >
-                                        {" "}
-                                        <ArrowBackIcon/>{" "}
-                                    </button>
-                                    <button
-                                        className="btn btn-primary w-75 m-1"
-                                        onClick={copyRight}
-                                    >
-                                        {" "}
-                                        <ArrowForwardIcon/>
-                                    </button>
-                                </div>
+                                
                             </Row>
+                            <div className="d-flex flex-column justify-content-center align-items-center pt-4">
+                                {/* <svg data-testid="ArrowBackIcon"></svg> */}
+                                <button className="btn btn-primary w-75 m-1" onClick={copyLeft}>
+                                    {" "}
+                                    <ArrowBackIcon/>{" "}
+                                </button>
+                                <button
+                                    className="btn btn-primary w-75 m-1"
+                                    onClick={copyRight}
+                                >
+                                    {" "}
+                                    <ArrowForwardIcon/>
+                                </button>
+                            </div>
                         </div>
                         <div className="row align-items-center h-50">
                             <div>

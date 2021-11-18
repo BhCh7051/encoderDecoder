@@ -18,7 +18,7 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import("./scss/theme.scss");
 function App() {
-  let [index, changeIndex] = useState(2);
+  let [index, changeIndex] = useState(1);
 
   const changeTab = (index) => {
     console.log(index);
@@ -60,7 +60,7 @@ function App() {
 
   return (
       <>
-        <div className="bg-light">
+        <div>
           <Header/>
           <Container>
             <Nav changeTab={changeTab}/>

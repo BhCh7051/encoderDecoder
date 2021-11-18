@@ -4,6 +4,9 @@ import React, {useState} from "react";
 import encrypt from "../../algorithms/Rot13Cipher/encrypt.js";
 import decrypt from "../../algorithms/Rot13Cipher/decrypt.js";
 
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 const Rot13Cipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -33,6 +36,22 @@ const Rot13Cipher = () => {
         //alert('Thank you for your feedback!')
     };
 
+    const copyLeft = (e) => {
+        e.preventDefault();
+        setForm({
+            ...form,
+            toEncrypt: form.toDecrypt,
+        });
+    };
+
+    const copyRight = (e) => {
+        e.preventDefault();
+        setForm({
+            ...form,
+            toDecrypt: form.toEncrypt,
+        });
+    };
+
     return (
         <div className="Flex">
             <div className="row justify-content-center h1 mt-4">Rot13 Cipher</div>
@@ -50,7 +69,7 @@ const Rot13Cipher = () => {
                 <div className="col-2">
                     <Container fluid className="justify-content-center h-100 flex ">
                         <div className="h-50 mt-4 w-100">
-                            <Row className="justify-content-center">
+                            {/* <Row className="justify-content-center">
                                 <Form.Label>Key</Form.Label>
                                 <Form.Control
                                     // as="text"
@@ -59,7 +78,21 @@ const Rot13Cipher = () => {
                                     // onChange={(e) => setField("toEncrypt", e.target.value)}
                                     // rows={10}
                                 />
-                            </Row>
+                            </Row> */}
+                            <div className="d-flex flex-column justify-content-center align-items-center pt-4">
+                                {/* <svg data-testid="ArrowBackIcon"></svg> */}
+                                <button className="btn btn-primary w-75 m-1" onClick={copyLeft}>
+                                    {" "}
+                                    <ArrowBackIcon/>{" "}
+                                </button>
+                                <button
+                                    className="btn btn-primary w-75 m-1"
+                                    onClick={copyRight}
+                                >
+                                    {" "}
+                                    <ArrowForwardIcon/>
+                                </button>
+                            </div>
                         </div>
                         <div className="row align-items-center h-50">
                             <div>
