@@ -34,7 +34,7 @@ String.prototype.hillDecrypt = function hillDecrypt(keys) {
         if ((det * i) % 26 === 1) di = i;
     }
     if (di === 0) {
-        alert("Could not Invert, Try different Key(Determinant 0)");
+        alert("Could not Invert, Try different Key(Determinant 0 or Determinant and 26 not co-prime)");
         return;
     }
     var ikeys = new Array(4);
