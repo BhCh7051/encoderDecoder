@@ -141,7 +141,7 @@ const AffineCipher = () => {
         </Form>
         <div>
             <h1 className="text-light bg-primary display-5">Description</h1>
-            <p style={{"font-size": "150%"}}>First each character of the message  is converted in a number from 0 to 25, corresponding to its position in the alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
+            <p style={{"font-size": "150%"}}>First each character of the message  is converted in a number from 0 to 25, corresponding to its position in the alphabet which contains 26 letters --{">"} (a = 0, b = 1 ... z = 25 ).
             Then, each number obtained is transformed by an encrypt(f(x) = ax + b).  Where "x" is representing the number while "a" and "b" are defined during the encryption.  While, "a" and "b" are the keys required to decrypt the final message.
             After passing the values we now have the numbers corresponding to them and now we perform mod(26) to each of them. That gives us another numeric values for each character.
             We then convert these values to the alphabets corresponding to each resulting values and then putting them together side by side gives the encrypted message.
