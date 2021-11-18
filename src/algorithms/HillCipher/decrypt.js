@@ -45,7 +45,7 @@ String.prototype.hillDecrypt = function hillDecrypt(keys) {
     for (i = 0; i < 4; i++) {
         if (ikeys[i] < 0) ikeys[i] += 26;
     }
-    var plaintext = "";
+    let plaintext = "";
     for (i = 0; i < ciphertext.length; i += 2) {
         plaintext += String.fromCharCode((ikeys[0] * (ciphertext.charCodeAt(i) - 96) + ikeys[1] * (ciphertext.charCodeAt(i + 1) - 96)) % 26 + 96);
         plaintext += String.fromCharCode((ikeys[2] * (ciphertext.charCodeAt(i) - 96) + ikeys[3] * (ciphertext.charCodeAt(i + 1) - 96)) % 26 + 96);
