@@ -1,12 +1,12 @@
-import { Form, Container, Row } from "react-bootstrap";
-import React, { useState } from "react";
-// import encrypt from "../../algorithms/AffineCipher/encrypt.js";
-// import decrypt from "../../algorithms/AffineCipher/decrypt.js";
+import {Form, Container, Row} from "react-bootstrap";
+import React, {useState} from "react";
+import encrypt from "../../algorithms/HillCipher/encrypt.js";
+import decrypt from "../../algorithms/HillCipher/decrypt.js";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const HillClimb = () => {
-    const [form, setForm] = useState({});
+  const [form, setForm] = useState({});
   const setField = (field, value) => {
     setForm({
       ...form,
@@ -16,23 +16,24 @@ const HillClimb = () => {
 
   const handleEncrypt = (e) => {
     e.preventDefault();
+    console.log(form);
+
     // get our new errors
-    setField(
-        "toDecrypt",
-        form.toEncrypt.Affineencrypt(Number(form.keyA), Number(form.keyB))
-    );
+    // setField(
+    //     "toDecrypt",
+    //     hillEncrypt(form.toEncrypt,[Number(form.keyA), Number(form.keyB),Number(form.keyC), Number(form.keyD)])
+    // );
+    setField("toDecrypt", form.toEncrypt.hillEncrypt([Number(form.keyA), Number(form.keyB), Number(form.keyC), Number(form.keyD)]));
+
     // No errors! Put any logic here for the form submission!
     //console.log(form.toEncrypt.Affineencrypt());
-    console.log(form);
     //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
     e.preventDefault();
     // get our new errors
-    setField(
-        "toEncrypt",
-        form.toDecrypt.Affinedecrypt(Number(form.keyA), Number(form.keyB))
+    setField("toEncrypt", form.toDecrypt.hillDecrypt([Number(form.keyA), Number(form.keyB), Number(form.keyC), Number(form.keyD)])
     );
     // No errors! Put any logic here for the form submission!
     //console.log(form.toDecrypt.Affinedecrypt());
@@ -110,8 +111,8 @@ const HillClimb = () => {
                         onChange={(e) => setField("keyD", e.target.value)}
                     />
                   </div>
-                  
-                  
+
+
                 </Row>
                 <div className="d-flex justify-content-center align-items-center">
                   {/* <svg data-testid="ArrowBackIcon"></svg> */}

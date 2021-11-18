@@ -57,13 +57,13 @@ const AtBASHCipher = () => {
       <Form className="row">
         <Form.Group className="col-5" controlId="exampleForm.ControlTextarea1">
           <Form.Label>To Encrypt(Decrypted Text)</Form.Label>
-          <Form.Control
-            as="textarea"
-            //defaultValue="The quick brown fox jumps over the lazy dog."
-            value={form.toEncrypt}
-            onChange={(e) => setField("toEncrypt", e.target.value)}
-            rows={10}
-          />
+            <Form.Control
+                as="textarea"
+                defaultValue="The quick brown fox jumps over the lazy dog."
+                value={form.toEncrypt}
+                onChange={(e) => setField("toEncrypt", e.target.value)}
+                rows={10}
+            />
         </Form.Group>
         <div className="col-2">
           <Container fluid className="justify-content-center h-100 flex ">

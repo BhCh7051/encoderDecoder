@@ -1,16 +1,21 @@
-// Lux 5.1.3
-// Bootswatch
+////cyborg
+//@import "./custom/variablescy.scss";
+//@import "../../node_modules/bootstrap/scss/bootstrap";
+//@import "./custom/cyborg.scss";
 
-// Custom.scss
-// Option A: Include all of Bootstrap
+/*//lux
+@import "./custom/_variable.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./custom/_lux.scss";*/
 
-// Include any default variable overrides here (though functions won't be available)
 //sketchy
 @import "./custom/_variables-1.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "./custom/_bootswatch.scss";
 
-//solar
+////solar
 //@import "./custom/_variables (1).scss";
 //@import "../../node_modules/bootstrap/scss/bootstrap";
 //@import "./custom/_bootswatch (1).scss";
+
+//@import "masthead";
