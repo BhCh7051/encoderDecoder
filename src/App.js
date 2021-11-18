@@ -37,10 +37,10 @@ function App() {
         return <CeaserCipher/>;
 
       case 5:
-        return <RailfenceCipher/>;
-
-      case 6:
         return <HillClimb />
+        
+      case 6:
+        return <RailfenceCipher/>;
 
       case 7:
         return <RotorCipher/>;

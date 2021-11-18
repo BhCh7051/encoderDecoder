@@ -22,10 +22,10 @@ const Nav = (props) => {
           Ceaser Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link5" onClick={() => props.changeTab(5)}>
-          Rail Fence Cipher
+          Hill Climb Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link6" onClick={() => props.changeTab(6)}>
-          Hill Climb Cipher
+          Rail Fence Cipher
         </ListGroup.Item>
         <ListGroup.Item action href="#link7" onClick={() => props.changeTab(7)}>
           Rot13 Cipher

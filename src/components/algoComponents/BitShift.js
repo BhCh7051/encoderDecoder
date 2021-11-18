@@ -129,8 +129,8 @@ const BitShiftCipher = () => {
                 <h1 className="text-light bg-primary display-5">Description</h1>
                 <p style={{"font-size": "150%"}}>
                     A bit shift cipher works just as the name suggests by shifting over the bits of the input text in ASCII.
-                    The bitwise operator({"<<"}) is used for switching the bits at a certain place. 
-                    We use (x = x + (1 {"<<"} i) %8) on each character after converting them to ASCII including the key(s) character.
+                    The bitwise operator ( {"<<"} ) is used for switching the bits at a certain place. 
+                    We use ( x = ( x + 1 ) {"<<"} i % 8 ) on each character after converting them to ASCII including the key(s) character.
                     Then for the number of characters in our key we put the ASCII manipulated text together.
                     Furthermore we encrypt the whole in base64.
 

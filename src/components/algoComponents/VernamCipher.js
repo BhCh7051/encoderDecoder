@@ -17,22 +17,40 @@ const VernamCipher = () => {
 
     const handleEncrypt = (e) => {
         e.preventDefault();
-        // get our new errors
-        setField("toDecrypt", form.toEncrypt.Vernamencrypt(form.key));
-        // No errors! Put any logic here for the form submission!
-        //console.log(form.toEncrypt.Vernamencrypt());
-        console.log(form);
-        //alert('Thank you for your feedback!')
+
+        let a = form.key;
+        let b = form.toEncrypt;
+
+        if(a.length != b.length){
+            alert("length of input text and key should be same");
+        }else{
+
+            // get our new errors
+            setField("toDecrypt", form.toEncrypt.Vernamencrypt(form.key));
+            // No errors! Put any logic here for the form submission!
+            //console.log(form.toEncrypt.Vernamencrypt());
+            console.log(form);
+            //alert('Thank you for your feedback!')
+        }
     };
 
     const handleDecrypt = (e) => {
         e.preventDefault();
-        // get our new errors
-        setField("toEncrypt", form.toDecrypt.Vernamdecrypt(form.key));
-        // No errors! Put any logic here for the form submission!
-        //console.log(form.toDecrypt.Vernamdecrypt());
-        console.log(form);
-        //alert('Thank you for your feedback!')
+
+        let a = form.key;
+        let b = form.toDecrypt;
+
+        if(a.length != b.length){
+            alert("length of input text and key should be same");
+        }else{
+
+            // get our new errors
+            setField("toEncrypt", form.toDecrypt.Vernamdecrypt(form.key));
+            // No errors! Put any logic here for the form submission!
+            //console.log(form.toDecrypt.Vernamdecrypt());
+            console.log(form);
+            //alert('Thank you for your feedback!')
+        }
     };
 
     const copyLeft = (e) => {

@@ -17,27 +17,52 @@ const AffineCipher = () => {
   const handleEncrypt = (e) => {
     e.preventDefault();
     // get our new errors
-    setField(
-        "toDecrypt",
-        form.toEncrypt.Affineencrypt(Number(form.keyA), Number(form.keyB))
-    );
-    // No errors! Put any logic here for the form submission!
-    //console.log(form.toEncrypt.Affineencrypt());
-    console.log(form);
+
+    let a=Number(form.keyA);
+    let b=26;
+
+    if(gcd(a, b)!=1){
+      alert("enter Key A, such that it is relative prime to 26");
+    }else{
+
+      setField(
+          "toDecrypt",
+          form.toEncrypt.Affineencrypt(Number(form.keyA), Number(form.keyB))
+      );
+      // No errors! Put any logic here for the form submission!
+      //console.log(form.toEncrypt.Affineencrypt());
+      console.log(form);
+    }
     //alert('Thank you for your feedback!')
   };
+
+  const gcd = (a, b) => {
+    if(b==0){
+      return a;
+    }else
+      return gcd(b, a%b);
+  }
 
   const handleDecrypt = (e) => {
     e.preventDefault();
     // get our new errors
-    setField(
-        "toEncrypt",
-        form.toDecrypt.Affinedecrypt(Number(form.keyA), Number(form.keyB))
-    );
-    // No errors! Put any logic here for the form submission!
-    //console.log(form.toDecrypt.Affinedecrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+
+    let a=Number(form.keyA);
+    let b=26;
+
+    if(gcd(a, b)!=1){
+      alert("enter Key A, such that it is relative prime to 26");
+    }else{
+
+      setField(
+          "toEncrypt",
+          form.toDecrypt.Affinedecrypt(Number(form.keyA), Number(form.keyB))
+      );
+      // No errors! Put any logic here for the form submission!
+      //console.log(form.toDecrypt.Affinedecrypt());
+      console.log(form);
+      //alert('Thank you for your feedback!')
+    }
   };
 
   const copyLeft = (e) => {
