@@ -145,7 +145,7 @@ const VernamCipher = () => {
             <div>
                 <h1 className="text-light bg-primary display-5">Description</h1>
                 <p style={{"font-size": "150%"}}>
-                Only used for Encrypting alphabetic text. In Vernam cipher algorithm, we take a key to encrypt the plain text which length should be equal to the length of the plain text
+                In Vernam cipher algorithm, we take a key to encrypt the plain text which length should be equal to the length of the plain text
                 Assign a number to each character of the plain-text and the key according to alphabetical order. 
                 Add both the number (Corresponding plain-text character number and Key character number). 
                 Subtract the number from 26 only if the resultant is greater than 26.
