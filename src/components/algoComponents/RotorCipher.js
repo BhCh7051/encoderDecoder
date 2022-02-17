@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
 
+import encrypt from "../../algorithms/Rot13Cipher/encrypt.js";
+import decrypt from "../../algorithms/Rot13Cipher/decrypt.js";
+
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-const encrypt = require("../../algorithms/Rot13Cipher/encrypt.js");
-const decrypt = require("../../algorithms/Rot13Cipher/decrypt.js");
 
 const Rot13Cipher = () => {
     const [form, setForm] = useState({});

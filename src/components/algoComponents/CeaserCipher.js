@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/CeaserCipher/encrypt.js";
+import decrypt from "../../algorithms/CeaserCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/CeaserCipher/encrypt.js");
-const decrypt = require("../../algorithms/CeaserCipher/decrypt.js");
 const CeaserCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {

@@ -3,8 +3,9 @@ import React, {useState} from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/atBashCipher/encrypt.js");
-const decrypt = require("../../algorithms/atBashCipher/decrypt.js");
+import encrypt from "../../algorithms/atBashCipher/encrypt.js";
+import decrypt from "../../algorithms/atBashCipher/decrypt.js";
+
 const AtBASHCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {

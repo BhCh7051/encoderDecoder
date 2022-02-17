@@ -1,11 +1,10 @@
 import {Form, Container, Row} from "react-bootstrap";
 import React, {useState} from "react";
-
+import encrypt from "../../algorithms/HillCipher/encrypt.js";
+import decrypt from "../../algorithms/HillCipher/decrypt.js";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/HillCipher/encrypt.js");
-const decrypt = require("../../algorithms/HillCipher/decrypt.js");
 const HillClimb = () => {
   const [form, setForm] = useState({});
   const setField = (field, value) => {

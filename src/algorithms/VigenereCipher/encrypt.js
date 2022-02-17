@@ -19,4 +19,4 @@ String.prototype.Vigenereencrypt = function (key) {
         return String.fromCharCode(((ordA(a) + ordA(b)) % 26 + 97));
     });
 }
-module.exports = (text, key) => text.encrypt(key)
+export default (text, key) => text.encrypt(key)

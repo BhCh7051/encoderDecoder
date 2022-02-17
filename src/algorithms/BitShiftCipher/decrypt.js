@@ -30,4 +30,4 @@ String.prototype.BitShiftdecrypt = function (key) {
     return String.fromCharCode(...decrypted);
 };
 
-module.exports = (text, key) => text.decrypt(key);
+export default (text, key) => text.decrypt(key);

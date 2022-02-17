@@ -26,4 +26,4 @@ String.prototype.Vernamencrypt = function (key) {
   return out;
 };
 
-module.exports = (str, key) => str.encrypt(key);
+export default (str, key) => str.encrypt(key);

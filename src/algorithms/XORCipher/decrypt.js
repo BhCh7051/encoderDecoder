@@ -24,4 +24,4 @@ String.prototype.XORdecrypt = function (key) {
   return output;
 };
 
-module.exports = (text, key) => text.decrypt(key);
+export default (text, key) => text.decrypt(key);

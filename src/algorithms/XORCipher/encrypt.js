@@ -25,4 +25,4 @@ String.prototype.XORencrypt = function (key) {
   return output;
 };
 
-module.exports = (text, key) => text.encrypt(key);
+export default (text, key) => text.encrypt(key);

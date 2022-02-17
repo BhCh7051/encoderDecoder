@@ -1,10 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/VernamCipher/encrypt.js";
+import decrypt from "../../algorithms/VernamCipher/decrypt.js";
+
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/VernamCipher/encrypt.js");
-const decrypt = require("../../algorithms/VernamCipher/decrypt.js");
 const VernamCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {

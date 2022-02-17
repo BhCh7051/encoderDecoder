@@ -25,4 +25,4 @@ String.prototype.Rot13decrypt = function () {
     return output;
 };
 
-module.exports = (text) => text.decrypt();
+export default (text) => text.decrypt();

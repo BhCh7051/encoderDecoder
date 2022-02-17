@@ -47,4 +47,4 @@ String.prototype.Affinedecrypt = function (a, b) {
   // console.log(msg);
   return msg;
 };
-module.exports = (text, a, b) => text.decrypt(a, b);
+export default (text, a, b) => text.decrypt(a, b);

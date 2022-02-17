@@ -26,4 +26,4 @@ String.prototype.Railfenceencrypt = function (rows = 3) {
     return r;
 };
 
-module.exports = (text, rows = 3) => text.encrypt(rows);
+export default (text, rows = 3) => text.encrypt(rows);

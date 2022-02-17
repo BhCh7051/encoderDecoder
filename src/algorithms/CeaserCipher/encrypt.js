@@ -11,4 +11,4 @@ String.prototype.Ceaserencrypt = function (n) {
   }
   return out;
 };
-module.exports = (text, n) => text.encrypt(n);
+export default (text, n) => text.encrypt(n);

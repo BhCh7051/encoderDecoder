@@ -35,4 +35,4 @@ String.prototype.hillEncrypt = function (keys) {
     return output;
 }
 
-module.exports = (text, keys) => text.encrypt(keys);
+export default (text, keys) => text.encrypt(keys);

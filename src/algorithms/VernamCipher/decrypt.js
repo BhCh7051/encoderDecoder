@@ -31,4 +31,4 @@ String.prototype.Vernamdecrypt = function (key) {
   return out;
 };
 
-module.exports = (str, key) => str.decrypt(key);
+export default (str, key) => str.decrypt(key);

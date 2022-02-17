@@ -1,11 +1,10 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/XORCipher/encrypt.js";
+import decrypt from "../../algorithms/XORCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-const encrypt = require("../../algorithms/XORCipher/encrypt.js");
-const decrypt = require("../../algorithms/XORCipher/decrypt.js");
 
 const XORCipher = () => {
     const [form, setForm] = useState({});

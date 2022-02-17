@@ -54,4 +54,4 @@ String.prototype.hillDecrypt = function hillDecrypt(keys) {
     return plaintext;
 };
 
-module.exports = (text, keys) => text.decrypt(keys);
+export default (text, keys) => text.decrypt(keys);

@@ -11,4 +11,4 @@ String.prototype.Ceaserdecrypt = function (n) {
     }
     return out;
 };
-module.exports = (text, n) => text.decrypt(n);
+export default (text, n) => text.decrypt(n);

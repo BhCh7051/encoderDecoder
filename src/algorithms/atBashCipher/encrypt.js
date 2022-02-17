@@ -24,4 +24,4 @@ String.prototype.AtBashencrypt = function () {
 
   return output;
 };
-module.exports = (text) => text.encrypt();
+export default (text) => text.encrypt();

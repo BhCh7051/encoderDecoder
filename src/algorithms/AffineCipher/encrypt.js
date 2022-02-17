@@ -21,4 +21,4 @@ String.prototype.Affineencrypt = function (a, b) {
   return output;
   // return [output, cle.join("-")];
 };
-module.exports = (text, a, b) => text.encrypt(a, b);
+export default (text, a, b) => text.encrypt(a, b);

@@ -1,10 +1,9 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/AffineCipher/encrypt.js";
+import decrypt from "../../algorithms/AffineCipher/decrypt.js";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-const encrypt = require("../../algorithms/AffineCipher/encrypt.js");
-const decrypt = require("../../algorithms/AffineCipher/decrypt.js");
 
 
 const AffineCipher = () => {

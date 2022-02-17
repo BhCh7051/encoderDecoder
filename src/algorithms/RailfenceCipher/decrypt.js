@@ -43,4 +43,4 @@ String.prototype.Railfencedecrypt = function (rows = 3) {
     return r;
 };
 
-module.exports = (text, rows = 3) => text.decrypt(rows);
+export default (text, rows = 3) => text.decrypt(rows);

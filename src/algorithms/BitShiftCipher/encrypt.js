@@ -32,4 +32,4 @@ String.prototype.BitShiftencrypt = function (key) {
     return btoa(JSON.stringify(array));
 };
 
-module.exports = (text, key) => text.encrypt(key);
+export default (text, key) => text.encrypt(key);

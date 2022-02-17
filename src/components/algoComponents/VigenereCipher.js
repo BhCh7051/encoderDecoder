@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/VigenereCipher/encrypt.js";
+import decrypt from "../../algorithms/VigenereCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/VigenereCipher/encrypt.js");
-const decrypt = require("../../algorithms/VigenereCipher/decrypt.js");
 const VigenereCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {

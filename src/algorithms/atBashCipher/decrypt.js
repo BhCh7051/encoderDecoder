@@ -24,4 +24,4 @@ String.prototype.AtBashdecrypt = function () {
 
   return output;
 };
-module.exports = (text) => text.decrypt();
+export default (text) => text.decrypt();

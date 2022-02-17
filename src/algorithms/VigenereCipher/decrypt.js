@@ -11,4 +11,4 @@ String.prototype.Vigeneredecrypt = function (key) {
         return String.fromCharCode(((ordA(a) + 26 - ordA(b)) % 26 + 97));
     });
 }
-module.exports = (text, key) => text.decrypt(key)
+export default (text, key) => text.decrypt(key)

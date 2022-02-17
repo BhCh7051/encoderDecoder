@@ -1,10 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
+import encrypt from "../../algorithms/BitShiftCipher/encrypt.js";
+import decrypt from "../../algorithms/BitShiftCipher/decrypt.js";
+
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const encrypt = require("../../algorithms/BitShiftCipher/encrypt.js");
-const decrypt = require("../../algorithms/BitShiftCipher/decrypt.js");
 const BitShiftCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
