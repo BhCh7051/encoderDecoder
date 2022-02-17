@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/CeaserCipher/encrypt.js";
-import decrypt from "../../algorithms/CeaserCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/CeaserCipher/encrypt.js");
+const decrypt = require("../../algorithms/CeaserCipher/decrypt.js");
 const CeaserCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -15,14 +15,14 @@ const CeaserCipher = () => {
         });
     };
 
-  const handleEncrypt = (e) => {
+    const handleEncrypt = (e) => {
     e.preventDefault();
     // get our new errors
     setField("toDecrypt", form.toEncrypt.Ceaserencrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toEncrypt.Ceaserencrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+        //console.log(form.toEncrypt.Ceaserencrypt());
+        // console.log(form);
+        //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
@@ -30,9 +30,9 @@ const CeaserCipher = () => {
     // get our new errors
     setField("toEncrypt", form.toDecrypt.Ceaserdecrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toDecrypt.Ceaserdecrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      //console.log(form.toDecrypt.Ceaserdecrypt());
+      // console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
     const copyLeft = (e) => {
@@ -124,12 +124,6 @@ const CeaserCipher = () => {
                   />
               </Form.Group>
           </Form>
-          <div>
-            <h1 className="text-light bg-primary display-5">Description</h1>
-            <p style={{"font-size": "150%"}}>
-            Caeser Cipher is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on.
-            </p>
-          </div>
       </div>
   );
 };

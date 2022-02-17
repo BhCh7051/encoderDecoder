@@ -1,11 +1,10 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/VernamCipher/encrypt.js";
-import decrypt from "../../algorithms/VernamCipher/decrypt.js";
-
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/VernamCipher/encrypt.js");
+const decrypt = require("../../algorithms/VernamCipher/decrypt.js");
 const VernamCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -29,7 +28,7 @@ const VernamCipher = () => {
             setField("toDecrypt", form.toEncrypt.Vernamencrypt(form.key));
             // No errors! Put any logic here for the form submission!
             //console.log(form.toEncrypt.Vernamencrypt());
-            console.log(form);
+            // console.log(form);
             //alert('Thank you for your feedback!')
         }
     };
@@ -48,7 +47,7 @@ const VernamCipher = () => {
             setField("toEncrypt", form.toDecrypt.Vernamdecrypt(form.key));
             // No errors! Put any logic here for the form submission!
             //console.log(form.toDecrypt.Vernamdecrypt());
-            console.log(form);
+            // console.log(form);
             //alert('Thank you for your feedback!')
         }
     };
@@ -142,16 +141,7 @@ const VernamCipher = () => {
                     />
                 </Form.Group>
             </Form>
-            <div>
-                <h1 className="text-light bg-primary display-5">Description</h1>
-                <p style={{"font-size": "150%"}}>
-                In Vernam cipher algorithm, we take a key to encrypt the plain text which length should be equal to the length of the plain text
-                Assign a number to each character of the plain-text and the key according to alphabetical order. 
-                Add both the number (Corresponding plain-text character number and Key character number). 
-                Subtract the number from 26 only if the resultant is greater than 26.
-                Now for the obtained numbers select the corresponding alphabets. 
-                </p>
-            </div>
+
         </div>
     );
 };

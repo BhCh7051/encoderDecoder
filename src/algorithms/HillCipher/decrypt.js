@@ -7,7 +7,7 @@
  * ========================================================================== */
 
 String.prototype.hillDecrypt = function hillDecrypt(keys) {
-    console.log(keys);
+    // console.log(keys);
 
     var ciphertext = this.toLowerCase();
     // keys = keys.split(" ");

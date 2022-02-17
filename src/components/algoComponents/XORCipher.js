@@ -1,10 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/XORCipher/encrypt.js";
-import decrypt from "../../algorithms/XORCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+const encrypt = require("../../algorithms/XORCipher/encrypt.js");
+const decrypt = require("../../algorithms/XORCipher/decrypt.js");
 
 const XORCipher = () => {
     const [form, setForm] = useState({});
@@ -13,16 +14,16 @@ const XORCipher = () => {
             ...form,
             [field]: value,
         });
-  };
+    };
 
   const handleEncrypt = (e) => {
     e.preventDefault();
     // get our new errors
     setField("toDecrypt", form.toEncrypt.XORencrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toEncrypt.XORencrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      //console.log(form.toEncrypt.XORencrypt());
+      // console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
@@ -30,9 +31,9 @@ const XORCipher = () => {
     // get our new errors
     setField("toEncrypt", form.toDecrypt.XORdecrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toDecrypt.XORdecrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      //console.log(form.toDecrypt.XORdecrypt());
+      // console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
   const copyLeft = (e) => {
@@ -124,14 +125,6 @@ const XORCipher = () => {
                   />
               </Form.Group>
           </Form>
-          <div>
-                <h1 className="text-light bg-primary display-5">Description</h1>
-                <p style={{"font-size": "150%"}}>
-                Firstly the cipher works on the principle of boolean XOR i.e returns 1 if and only if both “A” and “B” are different.
-                For encryption we need to convert the given message into their equivalent ASCII 
-                and then XOR the results with the binary conversion of the key given.
-                </p>
-            </div>
       </div>
   );
 };

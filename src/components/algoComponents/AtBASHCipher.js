@@ -3,26 +3,25 @@ import React, {useState} from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-import encrypt from "../../algorithms/atBashCipher/encrypt.js";
-import decrypt from "../../algorithms/atBashCipher/decrypt.js";
-
+const encrypt = require("../../algorithms/atBashCipher/encrypt.js");
+const decrypt = require("../../algorithms/atBashCipher/decrypt.js");
 const AtBASHCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
         setForm({
             ...form,
             [field]: value,
-    });
-  };
+        });
+    };
 
-  const handleEncrypt = (e) => {
+    const handleEncrypt = (e) => {
       e.preventDefault();
       // get our new errors
       setField("toDecrypt", form.toEncrypt.AtBashencrypt());
       // No errors! Put any logic here for the form submission!
-      //console.log(form.toEncrypt.AtBashencrypt());
-      console.log(form);
-      //alert('Thank you for your feedback!')
+        //console.log(form.toEncrypt.AtBashencrypt());
+        // console.log(form);
+        //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
@@ -31,7 +30,7 @@ const AtBASHCipher = () => {
       setField("toEncrypt", form.toDecrypt.AtBashdecrypt());
       // No errors! Put any logic here for the form submission!
       //console.log(form.toDecrypt.AtBashdecrypt());
-      console.log(form);
+      // console.log(form);
       //alert('Thank you for your feedback!')
   };
 
@@ -125,11 +124,7 @@ const AtBASHCipher = () => {
           />
         </Form.Group>
       </Form>
-      <div>
-        <h1 className="text-light bg-primary display-5 mt-4">Description</h1>
-        <p style={{"font-size": "150%"}}>Atbash cipher is a substitution cipher with just one specific key where all the letters are reversed that is A to Z and Z to A
-        </p>
-      </div>
+
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
 
-import encrypt from "../../algorithms/Rot13Cipher/encrypt.js";
-import decrypt from "../../algorithms/Rot13Cipher/decrypt.js";
-
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+const encrypt = require("../../algorithms/Rot13Cipher/encrypt.js");
+const decrypt = require("../../algorithms/Rot13Cipher/decrypt.js");
 
 const Rot13Cipher = () => {
     const [form, setForm] = useState({});
@@ -22,7 +22,7 @@ const Rot13Cipher = () => {
         setField("toDecrypt", form.toEncrypt.Rot13encrypt());
         // No errors! Put any logic here for the form submission!
         //console.log(form.toEncrypt.Rot13encrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -32,7 +32,7 @@ const Rot13Cipher = () => {
         setField("toEncrypt", form.toDecrypt.Rot13decrypt());
         // No errors! Put any logic here for the form submission!
         //console.log(form.toDecrypt.Rot13decrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -126,14 +126,7 @@ const Rot13Cipher = () => {
                     />
                 </Form.Group>
             </Form>
-            <div>
-            <h1 className="text-light bg-primary display-5 mt-4">Description</h1>
-            <p style={{"font-size": "150%"}}>The ROT13 cipher will substitute each letter by the letter coming 13 places after it in the alphabet. According to this logic, N should map to the 27th character of the alphabet, but we only have 26 characters, so we loop the alphabet around.
-            Using  ROT13(x) = ( x + 13 ) % 26 .
-            When encoding a string, we replace uppercase characters with their uppercase mirror, lowercase character with their lowercase mirror, and leave all other characters untouched
 
-            </p>
-            </div>
         </div>
     );
 };

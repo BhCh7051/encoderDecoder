@@ -1,11 +1,12 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/RailfenceCipher/encrypt.js";
-import decrypt from "../../algorithms/RailfenceCipher/decrypt.js";
+
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/RailfenceCipher/encrypt.js");
+const decrypt = require("../../algorithms/RailfenceCipher/decrypt.js");
 const RailfenceCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -13,16 +14,16 @@ const RailfenceCipher = () => {
             ...form,
             [field]: value,
         });
-  };
+    };
 
-  const handleEncrypt = (e) => {
+    const handleEncrypt = (e) => {
     e.preventDefault();
     // get our new errors
     setField("toDecrypt", form.toEncrypt.Railfenceencrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toEncrypt.Railfenceencrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+        //console.log(form.toEncrypt.Railfenceencrypt());
+        // console.log(form);
+        //alert('Thank you for your feedback!')
   };
 
   const handleDecrypt = (e) => {
@@ -30,9 +31,9 @@ const RailfenceCipher = () => {
     // get our new errors
     setField("toEncrypt", form.toDecrypt.Railfencedecrypt(Number(form.key)));
     // No errors! Put any logic here for the form submission!
-    //console.log(form.toDecrypt.Railfencedecrypt());
-    console.log(form);
-    //alert('Thank you for your feedback!')
+      //console.log(form.toDecrypt.Railfencedecrypt());
+      // console.log(form);
+      //alert('Thank you for your feedback!')
   };
 
   const copyLeft = (e) => {
@@ -124,15 +125,6 @@ const copyRight = (e) => {
                   />
               </Form.Group>
           </Form>
-          <div>
-            <h1 className="text-light bg-primary display-5">Description</h1>
-            <p style={{"font-size": "150%"}}>
-            In the rail fence cipher, the plain-text is written downwards and diagonally on successive rails of an imaginary fence.
-            When we reach the bottom rail, we traverse upwards moving diagonally, after reaching the top rail, the direction is changed again. Thus the alphabets of the message are written in a zig-zag manner.
-            After each alphabet has been written, the individual rows are combined to obtain the cipher-text.
-            The depth of the rail is determined by the key.
-            </p>
-          </div>
       </div>
   );
 };

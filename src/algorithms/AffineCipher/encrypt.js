@@ -8,7 +8,7 @@ String.prototype.Affineencrypt = function (a, b) {
   let output = "";
   let cle = [];
   let divtem = "";
-  console.log(array);
+  // console.log(array);
   for (let i of array) {
     if (i !== " ") {
       const image = alphabet[(i * a + b) % 26];

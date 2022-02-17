@@ -1,11 +1,10 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/BitShiftCipher/encrypt.js";
-import decrypt from "../../algorithms/BitShiftCipher/decrypt.js";
-
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/BitShiftCipher/encrypt.js");
+const decrypt = require("../../algorithms/BitShiftCipher/decrypt.js");
 const BitShiftCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -21,7 +20,7 @@ const BitShiftCipher = () => {
         setField("toDecrypt", form.toEncrypt.BitShiftencrypt(form.key));
         // No errors! Put any logic here for the form submission!
         //console.log(form.toEncrypt.BitShiftencrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -31,7 +30,7 @@ const BitShiftCipher = () => {
         setField("toEncrypt", form.toDecrypt.BitShiftdecrypt(form.key));
         // No errors! Put any logic here for the form submission!
         //console.log(form.toDecrypt.BitShiftdecrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -76,7 +75,7 @@ const BitShiftCipher = () => {
                                     value={form.key}
                                     onChange={(e) => setField("key", e.target.value)}
                                 />
-                                
+
                             </Row>
                             <div className="d-flex flex-column justify-content-center align-items-center pt-4">
                                 {/* <svg data-testid="ArrowBackIcon"></svg> */}
@@ -125,17 +124,6 @@ const BitShiftCipher = () => {
                     />
                 </Form.Group>
             </Form>
-            <div>
-                <h1 className="text-light bg-primary display-5">Description</h1>
-                <p style={{"font-size": "150%"}}>
-                    A bit shift cipher works just as the name suggests by shifting over the bits of the input text in ASCII.
-                    The bitwise operator ( {"<<"} ) is used for switching the bits at a certain place. 
-                    We use ( x = ( x + 1 ) {"<<"} i % 8 ) on each character after converting them to ASCII including the key(s) character.
-                    Then for the number of characters in our key we put the ASCII manipulated text together.
-                    Furthermore we encrypt the whole in base64.
-
-                </p>
-            </div>
         </div>
     );
 };

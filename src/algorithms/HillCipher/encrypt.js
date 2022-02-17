@@ -10,7 +10,7 @@ String.prototype.hillEncrypt = function (keys) {
     var plaintext = this.toLowerCase().replace(/[^a-z]/g, "");
     // var k = keys.toLowerCase().replace(/[^0-9 ]/g, "");
     var output = "";
-    console.log(keys)
+    // console.log(keys)
     // keys = k.split(" ");
     // do some error checking
     if (plaintext.length < 1) {

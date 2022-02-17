@@ -1,11 +1,9 @@
 import { Component } from "react";
 import { Row, Col, ListGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Algo1 from "./algoComponents/Algo1";
-import Algo2 from "./algoComponents/Algo2";
 
 const Nav = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <Row xs="auto" tm="auto" className="mt-3">
       <ListGroup horizontal defaultActiveKey="#link1">

@@ -1,11 +1,11 @@
 import {Container, Form, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/VigenereCipher/encrypt.js";
-import decrypt from "../../algorithms/VigenereCipher/decrypt.js";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/VigenereCipher/encrypt.js");
+const decrypt = require("../../algorithms/VigenereCipher/decrypt.js");
 const VigenereCipher = () => {
     const [form, setForm] = useState({});
     const setField = (field, value) => {
@@ -21,7 +21,7 @@ const VigenereCipher = () => {
         setField("toDecrypt", form.toEncrypt.Vigenereencrypt(form.key));
         // No errors! Put any logic here for the form submission!
         //console.log(form.toEncrypt.Vigenereencrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -31,7 +31,7 @@ const VigenereCipher = () => {
         setField("toEncrypt", form.toDecrypt.Vigeneredecrypt(form.key));
         // No errors! Put any logic here for the form submission!
         //console.log(form.toDecrypt.Vigeneredecrypt());
-        console.log(form);
+        // console.log(form);
         //alert('Thank you for your feedback!')
     };
 
@@ -92,7 +92,7 @@ const VigenereCipher = () => {
                                 </button>
                             </div>
                         </div>
-                        
+
                         <div className="row align-items-center h-50">
                             <div>
                                 <button
@@ -125,16 +125,6 @@ const VigenereCipher = () => {
                     />
                 </Form.Group>
             </Form>
-            <div>
-                <h1 className="text-light bg-primary display-5">Description</h1>
-                <p style={{"font-size": "150%"}}>
-                At its core, the vigenere cipher is several Caesar ciphers, with a different shift value depending on the key. In code, it can be done using modulo arithmetic.
-                It is a polyalphabetic cipher in which the cipher is based on substitution, using multiple substitution alphabets.
-                First convert every letter to a number between 0 and 25, where A is 0, and Z is 25.
-                If the key is shorter than the message, it is repeated until they are the same length,
-                The ith character of the output O, can be computed from the message M, and key K using  O[i] = (M[i] + K[i]) mod 26
-                </p>
-            </div>
         </div>
     );
 };

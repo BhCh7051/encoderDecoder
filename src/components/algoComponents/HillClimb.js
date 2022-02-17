@@ -1,10 +1,11 @@
 import {Form, Container, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import encrypt from "../../algorithms/HillCipher/encrypt.js";
-import decrypt from "../../algorithms/HillCipher/decrypt.js";
+
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+const encrypt = require("../../algorithms/HillCipher/encrypt.js");
+const decrypt = require("../../algorithms/HillCipher/decrypt.js");
 const HillClimb = () => {
   const [form, setForm] = useState({});
   const setField = (field, value) => {
@@ -16,7 +17,7 @@ const HillClimb = () => {
 
   const handleEncrypt = (e) => {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
 
     // get our new errors
     // setField(
@@ -37,7 +38,7 @@ const HillClimb = () => {
     );
     // No errors! Put any logic here for the form submission!
     //console.log(form.toDecrypt.Affinedecrypt());
-    console.log(form);
+    // console.log(form);
     //alert('Thank you for your feedback!')
   };
 
@@ -164,13 +165,7 @@ const HillClimb = () => {
             />
           </Form.Group>
         </Form>
-        <div>
-            <h1 className="text-light bg-primary display-5">Description</h1>
-            <p style={{"font-size": "150%"}}>Hill cipher is a polygraphic substitution cipher based on linear algebra. Each letter is represented by a number modulo 26. The scheme A = 0, B = 1, …, Z = 25 is used.
-            For encryption we convert the given key and message to numeric form using the above rule. Then perform matrix multiplication and take mod 26 of the resulting string.
-            Again convert the numeric result to alphabet.
-            </p>
-        </div>
+
       </div>
   );
 };
